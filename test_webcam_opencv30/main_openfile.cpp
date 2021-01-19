@@ -21,7 +21,7 @@ int main(int, char**)
 		Mat vol_out;
 
 
-		vol_in = imread("/home/parsec_01/TP_GPU/TP_seuillage/Images/ferrari.jpg");
+		vol_in = imread("/home/utilisateur/Téléchargements/TP_seuillage/Image/ferrari.jpg");
 
 		vol_out.create(vol_in.rows,vol_in.cols,CV_8UC(3));
 
@@ -38,8 +38,8 @@ int main(int, char**)
 				v=vol_in.at<Vec3b>(i,j)[1];
 				r=vol_in.at<Vec3b>(i,j)[2];
 
-				vol_out.at<Vec3b>(i,j)[0]=0;
-				vol_out.at<Vec3b>(i,j)[1]=0;
+				vol_out.at<Vec3b>(i,j)[0]=b;
+				vol_out.at<Vec3b>(i,j)[1]=v;
 				vol_out.at<Vec3b>(i,j)[2]=r;
 
 			}
